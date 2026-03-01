@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+
+actor "Адміністратор" as Admin
+actor "Оператор складу" as Operator
+actor "Керівник" as Manager
+
+rectangle "Інформаційна система управління складом" {
+
+  Admin -- (Керування користувачами)
+  Admin -- (Призначення ролей)
+  Admin -- (Контроль роботи системи)
+
+  Operator -- (Додавання товарів)
+  Operator -- (Редагування товарів)
+  Operator -- (Реєстрація надходжень)
+  Operator -- (Реєстрація відвантажень)
+  Operator -- (Перегляд залишків)
+
+  Manager -- (Перегляд аналітичних звітів)
+  Manager -- (Аналіз стану складу)
+}
+
+@enduml
